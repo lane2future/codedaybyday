@@ -20,4 +20,6 @@ typedef struct list
 mylist *create_list(void);
 mynode *create_node(int data);
 _Bool is_it_empty(mylist *list);
+void tail_insert(mylist *list, int data);
+void look_up_list(mylist *list);
 #endif

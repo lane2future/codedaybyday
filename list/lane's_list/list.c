@@ -33,3 +33,29 @@ _Bool is_it_empty(mylist *list)
 {
     return list->size == 0;
 }
+
+void tail_insert(mylist *list, int data)
+{
+    mynode *new_node = create_node(data);
+    if(is_it_empty(list))
+    {
+        list->head = new_node;
+    }
+    else
+    {
+        list->tail->next = new_node;
+    }
+    list->tail = new_node;
+    list->size++;
+}
+
+void look_up_list(mylist *list)
+{
+    mynode * cur_node = list->head;
+    int i = 0;
+    for(i = 0; i < list->size; i++)
+    {
+        printf("%d ", cur_node->data);
+        cur_node = cur_node->next;
+    }
+}
