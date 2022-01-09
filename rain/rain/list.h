@@ -8,7 +8,8 @@ typedef struct rain
 {
     int x;
     int y;
-    char ch;
+    int speed;
+    char str[20];
 }t_rain;
 
 typedef struct node
